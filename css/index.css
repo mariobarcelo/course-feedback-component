@@ -1,0 +1,165 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+	margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+	height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/*
+Styles
+*/
+
+:root {
+	--bg: #fec7d7;
+	--white: #ffffff;
+	--purple: #a786df;
+	--blue-dark: #0e172c;
+	--h1: 700 1.625rem/2rem Inter;
+	--body1-regular: 400 1rem/1.5rem Inter;
+	--body1-bold: 700 1rem/1.5rem Inter;
+}
+
+body {
+	font: var(--h1);
+	background-color: var(--bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
+	color: var(--blue-dark);
+	font: var(--h1);
+	margin-bottom: 0.5rem;
+}
+
+p {
+	color: var(--blue-dark);
+	font: var(--body1-regular);
+}
+
+.card {
+	max-width: 426px;
+	border: 2.35px solid var(--blue-dark);
+	border-radius: 14.12px;
+	background-color: var(--white);
+	box-shadow: 5px 5px 0px var(--blue-dark);
+	padding: 40px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	margin-top: 27px;
+}
+
+.score-wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+input[type='radio'] {
+	display: none;
+}
+
+label {
+	border: 3px solid var(--blue-dark);
+	border-radius: 58.83px;
+	font-size: 16px;
+	height: 56px;
+	width: 56px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+label:hover {
+	cursor: pointer;
+	background-color: var(--purple);
+}
+
+input:checked + label {
+	color: var(--white);
+	background-color: var(--blue-dark);
+}
+
+button {
+	color: var(--white);
+	font: var(--body1-bold);
+	background-color: var(--blue-dark);
+	border-radius: 117.67px;
+	border: none;
+	width: 100%;
+	max-width: 346px;
+	padding-block: 11.77px;
+}
+
+button:hover {
+	cursor: pointer;
+}

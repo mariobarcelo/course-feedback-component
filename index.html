@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<script defer src="index.js"></script>
+		<title>Componente de Feedback de cursos</title>
+	</head>
+	<body>
+		<div class="card">
+			<h1>¿Qué te ha parecido al curso?</h1>
+			<p>
+				Nos importa mucho tu opinión para seguir mejorando el
+				contenido y experiencia de la plataforma. 
+			</p>
+			<form action="">
+				<div class="score-wrapper">
+					<input type="radio" id="one" name="score" value="1" />
+					<label for="one">1</label>
+					<input type="radio" id="two" name="score" value="2" />
+					<label for="two">2</label>
+					<input
+						type="radio"
+						id="three"
+						name="score"
+						value="3"
+						required />
+					<label for="three">3</label>
+					<input type="radio" id="four" name="score" value="4" />
+					<label for="four">4</label>
+					<input type="radio" id="five" name="score" value="5" />
+					<label for="five">5</label>
+				</div>
+				<button>Enviar respuesta</button>
+			</form>
+		</div>
+	</body>
+</html>
