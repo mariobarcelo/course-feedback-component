@@ -20,31 +20,43 @@
 	</head>
 	<body>
 		<div class="card">
-			<h1>¿Qué te ha parecido al curso?</h1>
-			<p>
-				Nos importa mucho tu opinión para seguir mejorando el
-				contenido y experiencia de la plataforma. 
-			</p>
-			<form action="">
-				<div class="score-wrapper">
-					<input type="radio" id="one" name="score" value="1" />
-					<label for="one">1</label>
-					<input type="radio" id="two" name="score" value="2" />
-					<label for="two">2</label>
-					<input
-						type="radio"
-						id="three"
-						name="score"
-						value="3"
-						required />
-					<label for="three">3</label>
-					<input type="radio" id="four" name="score" value="4" />
-					<label for="four">4</label>
-					<input type="radio" id="five" name="score" value="5" />
-					<label for="five">5</label>
-				</div>
-				<button>Enviar respuesta</button>
-			</form>
+			<div class="first-view">
+				<h1>¿Qué te ha parecido al curso?</h1>
+				<p>
+					Nos importa mucho tu opinión para seguir mejorando el
+					contenido y experiencia de la plataforma. 
+				</p>
+				<form action="">
+					<div class="score-wrapper">
+						<input type="radio" id="one" name="score" value="1" />
+						<label for="one">1</label>
+						<input type="radio" id="two" name="score" value="2" />
+						<label for="two">2</label>
+						<input
+							type="radio"
+							id="three"
+							name="score"
+							value="3"
+							required />
+						<label for="three">3</label>
+						<input type="radio" id="four" name="score" value="4" />
+						<label for="four">4</label>
+						<input type="radio" id="five" name="score" value="5" />
+						<label for="five">5</label>
+					</div>
+					<button type="submit" disabled>Enviar respuesta</button>
+				</form>
+			</div>
+			<div class="second-view" style="display: none">
+				<img
+					src="./images/Big Shoes Chatting.png"
+					alt="Big-Shoes-Chatting" />
+				<h1>Gracias por tu apoyo</h1>
+				<p>
+					Trabajaremos en conjunto para mejorar cada día gracias a tu
+					apoyo. 
+				</p>
+			</div>
 		</div>
 	</body>
 </html>

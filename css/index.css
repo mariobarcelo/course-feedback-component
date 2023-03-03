@@ -90,6 +90,17 @@ body {
 	align-items: center;
 }
 
+.card {
+	max-width: 426px;
+	border: 2.35px solid var(--blue-dark);
+	border-radius: 14.12px;
+	background-color: var(--white);
+	box-shadow: 5px 5px 0px var(--blue-dark);
+	padding-inline: 40px;
+	padding-block: 40px;
+	margin-inline: 20px;
+}
+
 h1 {
 	color: var(--blue-dark);
 	font: var(--h1);
@@ -99,15 +110,6 @@ h1 {
 p {
 	color: var(--blue-dark);
 	font: var(--body1-regular);
-}
-
-.card {
-	max-width: 426px;
-	border: 2.35px solid var(--blue-dark);
-	border-radius: 14.12px;
-	background-color: var(--white);
-	box-shadow: 5px 5px 0px var(--blue-dark);
-	padding: 40px;
 }
 
 form {
@@ -137,11 +139,14 @@ label {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition: 0.5s ease-in-out;
 }
 
 label:hover {
 	cursor: pointer;
 	background-color: var(--purple);
+	transform: translateY(-6px);
+	transition: 0.3s ease-in-out;
 }
 
 input:checked + label {
@@ -154,12 +159,33 @@ button {
 	font: var(--body1-bold);
 	background-color: var(--blue-dark);
 	border-radius: 117.67px;
-	border: none;
+	border: 3px solid var(--blue-dark);
 	width: 100%;
 	max-width: 346px;
 	padding-block: 11.77px;
 }
 
 button:hover {
-	cursor: pointer;
+	background-color: var(--purple);
+	color: var(--blue-dark);
+}
+
+button:disabled {
+	cursor: not-allowed;
+	background-color: var(--blue-dark);
+	color: var(--white);
+}
+
+@media screen and (max-width: 425px) {
+	.card {
+		padding-inline: 25px;
+		margin-inline: 10px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.card {
+		padding-inline: 15px;
+		margin-inline: 0px;
+	}
 }
