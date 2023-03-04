@@ -1,6 +1,12 @@
 const form = document.querySelector('form');
 const scoreInputs = document.querySelectorAll('input[name="score"]');
 const submitButton = document.querySelector('button');
+const title = document.querySelector('h1');
+const text = document.querySelector('p');
+const img = document.querySelector('img');
+
+const thankyouTitle = document.querySelector('h1.thank-you-title');
+const thankyouText = document.querySelector('p.thank-you-text');
 
 const firstView = document.querySelector('.first-view');
 const secondView = document.querySelector('.second-view');
@@ -16,8 +22,18 @@ form.addEventListener('click', (event) => {
 });
 
 function changeView() {
-	firstView.style.display = 'none';
-	secondView.style.display = 'block';
+	form.style.display = 'none';
+	title.style.display = 'none';
+	text.style.display = 'none';
+
+	img.style.display = 'block';
+	thankyouTitle.style.display = 'block';
+	thankyouText.style.display = 'block';
+	setTimeout(() => {
+		img.classList.add('visible');
+		thankyouTitle.classList.add('visible');
+		thankyouText.classList.add('visible');
+	}, 10);
 }
 
 function handleSubmit(event) {
