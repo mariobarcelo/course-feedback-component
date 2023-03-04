@@ -15,7 +15,6 @@ form.addEventListener('submit', handleSubmit);
 
 form.addEventListener('click', (event) => {
 	if (event.target.nodeName === 'INPUT') {
-		console.log('Input!');
 		submitButton.disabled = false;
 		submitButton.style.cursor = 'pointer';
 	}
@@ -39,12 +38,10 @@ function changeView() {
 function handleSubmit(event) {
 	event.preventDefault();
 
-	console.log('Form submited');
 	let selectedInput;
 
 	scoreInputs.forEach((input) => {
 		if (input.checked) selectedInput = input;
 	});
-	console.log(`The selected number was ${selectedInput.value}`);
 	changeView();
 }
